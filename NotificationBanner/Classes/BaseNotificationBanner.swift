@@ -478,12 +478,12 @@ open class BaseNotificationBanner: UIView {
                        width: window.width - edgeInsets.left - edgeInsets.right,
                        height: bannerHeight)
 
-        bannerPositionFrame = BannerPositionFrame(bannerPosition: bannerPosition,
+        bannerPositionFrame = BannerPositionFrame(bannerPosition: bannerPosition ?? .top,
                                                   bannerWidth: window.width,
                                                   bannerHeight: bannerHeight,
                                                   maxY: maximumYPosition(),
                                                   finishYOffset: finishBannerYOffset(),
-                                                  edgeInsets: bannerEdgeInsets)
+                                                  edgeInsets: edgeInsets)
     }
 
     /**
